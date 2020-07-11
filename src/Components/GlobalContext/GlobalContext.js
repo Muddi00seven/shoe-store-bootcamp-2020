@@ -1,5 +1,5 @@
 import React, {createContext , useReducer} from 'react'
-import { shoesData } from '../Products/ShoesCard';
+import { shoesData } from '../Products/ShoesData';
 import GlobalReducer from './GlobalReducer'
 
 const initialState = {
