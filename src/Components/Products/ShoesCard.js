@@ -10,6 +10,15 @@ import {
     Grid,
   } from "@material-ui/core";
 import { GlobalContext } from '../GlobalContext/GlobalContext'; 
+import { makeStyles } from '@material-ui/core/styles';
+
+
+const useStyles = makeStyles({
+  root: {
+    maxWidth: 345,
+  },
+});
+
 
 
 export const ShoesCard = ({product , id , name , price , imgUrl}) => {
@@ -30,53 +39,37 @@ export const ShoesCard = ({product , id , name , price , imgUrl}) => {
         }
     }
 
+    const classes = useStyles();
+
+   
     return (
-        <div>
-               <Grid xs={12} sm={5} md={3} item>
-        <Card >
-          <CardActionArea>
-            <CardMedia
-              
-              component="img"
-              alt="Logitec Zone Wireless"
-              height="200"
-              image={imgUrl}
-              title="Logitec Zone Wireless"
-            />
-            <CardContent>
-              <Typography noWrap gutterBottom variant="h5" component="h2">
-                {name}
-              </Typography>
-              <Typography
-                align="justify"
-                variant="body2"
-                color="textSecondary"
-                component="p"
-              >
-                Open workspaces are great for collaboration, but they can also
-                be noisy. Take control of your Keyboard environment
-              </Typography>
-            </CardContent>
-            <CardContent >
-              <Typography variant={"h6"} align="center">
-                PRICE
-              </Typography>
-              <Typography align="center">Rs.{price} </Typography>
-            </CardContent>
-          </CardActionArea>
-          <CardActions>
-            <div >
-              <Button
-                onClick={addToCart}
-                size="small"
-                color="primary"
-              >
-                {btnText}
-              </Button>
-            </div>
-          </CardActions>
-        </Card>
-      </Grid>
-        </div>
+      <Grid>
+      <Card className={classes.root}>
+      <CardActionArea>
+        <CardMedia
+          component="img"
+          alt="Contemplative Reptile"
+          height="140"
+          image={imgUrl}
+          title="Contemplative Reptile"
+        />
+        <CardContent>
+          <Typography gutterBottom variant="h5" component="h2">
+          {name}
+          </Typography>
+          <Typography variant="body2" color="textSecondary" component="p">
+            Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging
+            across all continents except Antarctica
+          </Typography>
+        </CardContent>
+      </CardActionArea>
+      <CardActions>
+       
+        <Button size="small" color="primary">
+        {btnText}
+        </Button>
+      </CardActions>
+    </Card>
+    </Grid>
     )
 }
