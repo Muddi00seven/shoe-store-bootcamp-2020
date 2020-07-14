@@ -1,68 +1,74 @@
-import React, {createContext , useReducer} from 'react'
-import { shoesData } from '../Products/ShoesData';
+import React, {createContext, useReducer} from 'react'
 import GlobalReducer from './GlobalReducer'
+import { ShoesData } from '../Shoes/ShoesData/ShoesData'
 
 const initialState = {
-    shoesData,
-    cart : [
-
+    
+    ShoesData,
+    cart:[
+        
     ]
-}
 
-export const GlobalContext = createContext(initialState);
+} 
+    
 
-export const GlobalProvider = ({children}) => {
-let [state , dispatch] = useReducer(GlobalReducer , initialState)
 
-    const addItem = (product) => {
+export const GlobalContext = createContext(initialState)
+
+
+export const GlobalProvider = ({ children }) =>{
+    
+    let [state, dispatch] = useReducer(GlobalReducer, initialState)
+    
+
+    function addItem(product){
         dispatch({
-            type: 'ADD_TO_CART',
-            payload : product
+            type:'ADD_TO_CART',
+            payload:product
         })
-    } 
-
-    const plus = (id) => {
+    }
+    function plus(id){
         dispatch({
-            type: 'INCREASE',
-            payload : id
+            type:'INCREASE',
+            payload:id
         })
-    } 
-
-    const minus = (id) => {
+    }
+    function minus(id){
         dispatch({
-            type: 'DECREASE' ,
-            payload : id
+            type:'DECREASE',
+            payload:id
         })
-    } 
-
-    const remove = (id) => {
+    }
+    function remove(id){
         dispatch({
-            type: 'REMOVE',
-            payload : id
+            type:'REMOVE',
+            payload:id
         })
-    } 
-
-    const checkOut = () => {
+    }
+    function checkout(){
         dispatch({
-            type: 'CHECKOUT'
+            type:'CHECKOUT',
+            
         })
-    } 
+    }
+  
+    
 
-
+   
 
     return(
-       <GlobalContext.Provider value={{
-           shoesData:state.shoesData,
-           cart:state.cart,
-           addItem,
-           plus,
-           minus,
-           remove,
-           checkOut
-       }}>
+        <GlobalContext.Provider value={{
+            ShoesData:state.ShoesData,
+            cart:state.cart,
+            addItem,
+            plus,
+            minus,
+            remove,
+            checkout,
 
-
-{children}
-       </GlobalContext.Provider>
+        }}>
+            {children}
+        </GlobalContext.Provider>
     )
+
 }
