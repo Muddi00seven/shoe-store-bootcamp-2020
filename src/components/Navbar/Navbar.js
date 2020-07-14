@@ -12,8 +12,7 @@ import Badge from "@material-ui/core/Badge";
 import ShoppingCartIcon from "@material-ui/icons/ShoppingCart";
 
 import {  useNavigate } from 'react-router-dom';
-// import NavLink from "./NavLink";
-// import CartButton from "./CartButton";
+
 
 const useStyles = makeStyles((theme) => ({
   container: {
@@ -22,9 +21,13 @@ const useStyles = makeStyles((theme) => ({
   },
   appBar: {
     zIndex: theme.zIndex.drawer + 1,
+    background : '#EE2713'
   },
   links: {
     display: "flex",
+  },
+  btn:{
+  marginLeft : '20px'
   },
   menuButton: {
     color: theme.palette.primary.contrastText,
@@ -57,7 +60,6 @@ const Navbar = ({ onMenuClickHandler }) => {
           </Hidden>
 
           <div className={classes.rightContainer}>
-            {/* <CartButton /> */}
             <IconButton onClick={()=> navigate('cart')} aria-label="show  new mails" color="inherit">
               <Badge badgeContent={cart.length} color="secondary">
                 <ShoppingCartIcon />
