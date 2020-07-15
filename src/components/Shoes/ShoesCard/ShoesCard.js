@@ -14,7 +14,7 @@ import { GlobalContext } from "../../GlobalContext/GlobalContext";
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 
-export default function Products({ product,id, name, price, imgUrl }) {
+export default function Products({ product,id, name, price, imgUrl ,description }) {
   const styles = useStyles();
 
   const { addItem, cart ,plus, } = useContext(GlobalContext);
@@ -44,10 +44,10 @@ export default function Products({ product,id, name, price, imgUrl }) {
             <CardMedia
               className={styles.img}
               component="img"
-              alt="Logitec Zone Wireless"
+              alt="NIKE SHOES"
               height="200"
               image={imgUrl}
-              title="Logitec Zone Wireless"
+              title="NIKE SHOES STORE"
             />
             <CardContent>
               <Typography noWrap gutterBottom variant="h5" component="h2">
@@ -59,8 +59,7 @@ export default function Products({ product,id, name, price, imgUrl }) {
                 color="textSecondary"
                 component="p"
               >
-                Open workspaces are great for collaboration, but they can also
-                be noisy. Take control of your Keyboard environment
+             {description}
               </Typography>
             </CardContent>
             <CardContent className={styles.root}>

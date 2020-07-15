@@ -5,7 +5,7 @@ import Home from "./components/Home";
 import Navigation from "./components/Navbar/Navigation";
 import Cart from "./components/Cart/cart";
 import { GlobalProvider } from "./components/GlobalContext/GlobalContext";
-import Slideshow from './components/Headings/Crausel';
+// import Slideshow from './components/Headings/Crausel';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
           
           <Router>
           <Navigation/>
-          <Slideshow/>
+          {/* <Slideshow/> */}
               <Routes>
                 <Route path='/' element={<Home />}></Route>
                 <Route path='cart' element={<Cart />}></Route>

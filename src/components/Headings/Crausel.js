@@ -38,14 +38,3 @@ const Slideshow = () => {
 
 export default Slideshow;
 
-
-
-
-
-
-
-// const slideImages = [
-//   'https://www.czone.com.pk/images/thumbnails-large/redragon-k585-combo-removebg-preview-1540-9767-270620022111.jpg',
-//   'https://www.czone.com.pk/images/thumbnails-large/redragon-k585-combo-removebg-preview-1540-9767-270620022111.jpg',
-//   'https://www.czone.com.pk/images/thumbnails-large/redragon-k585-combo-removebg-preview-1540-9767-270620022111.jpg'
-// ];

@@ -2,6 +2,8 @@ import React from "react";
 import ProductList from "./Shoes/ProductList";
 import { makeStyles } from "@material-ui/core/styles";
 import CheckIcon from '@material-ui/icons/Check';
+import Slideshow from './Headings/Crausel';
+
 import {
   
   Typography,
@@ -14,11 +16,12 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: 345,
   },
 home: {
-    marginTop:'7%'
+    marginTop:'-48%'
 },
 welcome:{
 marginBottom:'2%'
-}
+},
+
 }));
 
 export default function Home() {
@@ -26,7 +29,8 @@ export default function Home() {
 
   return (
     <div className={styles.home}>
-        <Typography className={styles.welcome} align='center'  variant={"h4"}>WELCOME TO <CheckIcon fontSize='large'/> NIKE STORE</Typography>
+      <Slideshow/>
+        <Typography className={styles.welcome} align='center'  variant={"h4"}>START SHOPPING NOW</Typography>
         <ProductList/>
     </div>
   );
