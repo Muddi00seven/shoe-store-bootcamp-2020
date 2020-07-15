@@ -5,11 +5,8 @@ export const useStyles = makeStyles(  ({
     root: {
       padding: 0,
     },
-    card: {
-      // maxWidth: 345,
-    },
+  
     img: {
-      // width: "250px",
       margin: "0 auto",
     },
     btn: {

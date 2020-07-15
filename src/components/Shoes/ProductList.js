@@ -1,7 +1,7 @@
-import React, {useContext} from 'react'
-import {Products} from './ShoesCard/ShoesCard'
-import {Grid} from '@material-ui/core'
-import {GlobalContext} from '../GlobalContext/GlobalContext'
+import React, {useContext} from 'react';
+import {Products} from './ShoesCard/ShoesCard';
+import {Grid} from '@material-ui/core';
+import {GlobalContext} from '../GlobalContext/GlobalContext';
 
 
 const ProductList = () => {
@@ -16,4 +16,4 @@ const ProductList = () => {
     )
 }
 
-export default ProductList
+export default ProductList;

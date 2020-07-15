@@ -5,7 +5,6 @@ import Home from "./components/Home";
 import Navigation from "./components/Navbar/Navigation";
 import Cart from "./components/Cart/cart";
 import { GlobalProvider } from "./components/GlobalContext/GlobalContext";
-// import Slideshow from './components/Headings/Crausel';
 
 function App() {
   return (
