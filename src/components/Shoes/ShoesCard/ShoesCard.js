@@ -1,6 +1,5 @@
 import React, { useContext,useState } from "react";
-import {
-  CardActionArea,CardContent,CardActions,Button,CardMedia,Typography,Card,Grid,} from "@material-ui/core";
+import {CardActionArea,CardContent,CardActions,Button,CardMedia,Typography,Card,Grid,} from "@material-ui/core";
 import {useStyles} from './useStyle'
 import { GlobalContext } from "../../GlobalContext/GlobalContext";
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';

@@ -1,6 +1,5 @@
 import React from 'react';
 import 'react-slideshow-image/dist/styles.css';
- import './Crausel.css';
 import { Zoom } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css';
  
