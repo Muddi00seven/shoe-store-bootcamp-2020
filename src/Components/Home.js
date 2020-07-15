@@ -3,11 +3,7 @@ import ProductList from "./Shoes/ProductList";
 import { makeStyles } from "@material-ui/core/styles";
 import Slideshow from './Headings/Crausel';
 
-import {
-  
-  Typography,
-  
-} from "@material-ui/core";
+import {Typography} from "@material-ui/core";
 
 
 const useStyles = makeStyles((theme) => ({
