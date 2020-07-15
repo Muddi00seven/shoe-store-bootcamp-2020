@@ -1,8 +1,8 @@
 import React from 'react';
-import 'react-slideshow-image/dist/styles.css'
- import './Crausel.css'
+import 'react-slideshow-image/dist/styles.css';
+ import './Crausel.css';
 import { Zoom } from 'react-slideshow-image';
-import 'react-slideshow-image/dist/styles.css'
+import 'react-slideshow-image/dist/styles.css';
  
 const images = [
   'https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,b_rgb:f5f5f5/qqbgmdlp1godyiochmvx/zoom-pegasus-turbo-2-mens-running-shoe-GcDSX3.jpg',
@@ -25,7 +25,7 @@ const Slideshow = () => {
     <div className="slide-container">
     <Zoom scale={0.4}>
       {
-        images.map((each, index) => <img key={index} style={{width: "100%" } } className="crauseImage" src={each} />)
+        images.map((each, index) => <img key={index} style={{width: "100%" } } alt='shoes' className="crauseImage" src={each} />)
       }
     </Zoom>
   </div>

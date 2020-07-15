@@ -8,7 +8,7 @@
 }
 
 .strip{
-    background-color: #282828;
+    background-color: #d44a4a;
 }
 .header{
     color: #fff;
@@ -70,7 +70,7 @@
 }
 
 .price{
-    background-color: #ccbebe2f;
+    background-color: #0e010113;
     
 }
 
@@ -79,11 +79,7 @@
     justify-content: space-between;
     margin: 10px;
 }
-.discount{
-    display: flex;
-    justify-content: space-between;
-    margin: 10px;
-}
+
 .endTotal{
     display: flex;
     justify-content: space-between;
@@ -103,8 +99,8 @@
 .checkout{
     text-align: center;
     padding: 10px ;
-    background-color: #282828;
-    color:#fff ;
+    background-color: #d44a4a;
+        color:#fff ;
 }
 .checkout:hover{
     cursor: pointer;

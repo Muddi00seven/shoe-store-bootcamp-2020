@@ -1,51 +1,45 @@
-import React, {createContext, useReducer} from 'react'
-import GlobalReducer from './GlobalReducer'
-import { ShoesData } from '../Shoes/ShoesData/ShoesData'
+import React, {useReducer , createContext} from 'react';
+import GlobalReducer from './GlobalReducer';
+import { ShoesData } from '../Shoes/ShoesData/ShoesData';
 
 const initialState = {
-    
     ShoesData,
-    cart:[
-        
-    ]
-
+    cart:[]
 } 
     
-
-
-export const GlobalContext = createContext(initialState)
+export const GlobalContext = createContext(initialState);
 
 
 export const GlobalProvider = ({ children }) =>{
     
-    let [state, dispatch] = useReducer(GlobalReducer, initialState)
+    let [state, dispatch] = useReducer(GlobalReducer, initialState);
     
 
-    function addItem(product){
+    const addItem = (product)=> {
         dispatch({
             type:'ADD_TO_CART',
             payload:product
         })
     }
-    function plus(id){
+    const plus =(id)=>{
         dispatch({
             type:'INCREASE',
             payload:id
         })
     }
-    function minus(id){
+    const minus = (id)=>{
         dispatch({
             type:'DECREASE',
             payload:id
         })
     }
-    function remove(id){
+    const remove = (id)=>{
         dispatch({
             type:'REMOVE',
             payload:id
         })
     }
-    function checkout(){
+    const checkout = ()=>{
         dispatch({
             type:'CHECKOUT',
             
@@ -65,7 +59,6 @@ export const GlobalProvider = ({ children }) =>{
             minus,
             remove,
             checkout,
-
         }}>
             {children}
         </GlobalContext.Provider>

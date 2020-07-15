@@ -1,7 +1,6 @@
 import React from "react";
 import ProductList from "./Shoes/ProductList";
 import { makeStyles } from "@material-ui/core/styles";
-import CheckIcon from '@material-ui/icons/Check';
 import Slideshow from './Headings/Crausel';
 
 import {

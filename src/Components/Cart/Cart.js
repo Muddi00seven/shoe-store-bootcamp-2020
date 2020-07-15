@@ -1,19 +1,18 @@
-import React,{useContext} from 'react'
-import { Grid,Paper } from '@material-ui/core'
-import CartItem from './CartItems'
-import classes from './cart.module.css'
-import { GlobalContext } from '../GlobalContext/GlobalContext'
-import { Link, useNavigate } from 'react-router-dom'
+import React,{useContext} from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import { Grid,Paper } from '@material-ui/core';
+import CartItem from './CartItems';
+import classes from './cart.module.css';
+import { GlobalContext } from '../GlobalContext/GlobalContext';
 
 
 
 const Carts = () => {
     
   const {cart,checkout} = useContext(GlobalContext) 
-  let messege = <h1 className={classes.messege}>YOUR CART IS EMPTY <br/> GO TO <Link to='/'>HOME</Link> FOR SHOPPING</h1>
+  let messege = <h1 className={classes.messege}>VISIT <br/>  <Link to='/'>STORE</Link> TO GET SOME ITEMS IN YOUR CART </h1>
   const navigate = useNavigate()
   const handelCheckout = ()=>{
-    
     checkout()
     navigate('/')
   }
@@ -26,7 +25,7 @@ const Carts = () => {
                     <Paper square  className={classes.box1}>
                        <div className={classes.strip}>
                         <div className={classes.header}>
-                            <h4>#</h4>
+                            <h4>Items</h4>
                             <h4>Product</h4>
                             <h4>Quantity</h4>
                             <h4>Price</h4>
@@ -51,15 +50,6 @@ const Carts = () => {
                                     <div>{totalPrice}</div>
                                 </div>
                                 
-                                <div className={classes.discount}>
-                                    <div>Discount</div>
-                                    <div> 0</div>
-                                </div>
-                                <div className={classes.discount}>
-                                    <div>Sales TAX</div>
-                                    <div> 0</div>
-                                </div>
-                                
                                 <hr/>
                                 <div className={classes.endTotal}>
                                     <div>Grand Total</div>
@@ -75,4 +65,4 @@ const Carts = () => {
         </div>
     )
 }
-export default Carts
+export default Carts;

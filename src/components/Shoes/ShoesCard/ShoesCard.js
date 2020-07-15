@@ -1,20 +1,12 @@
 import React, { useContext,useState } from "react";
 import {
-  CardActionArea,
-  CardContent,
-  CardActions,
-  Button,
-  CardMedia,
-  Typography,
-  Card,
-  Grid,
-} from "@material-ui/core";
+  CardActionArea,CardContent,CardActions,Button,CardMedia,Typography,Card,Grid,} from "@material-ui/core";
 import {useStyles} from './useStyle'
 import { GlobalContext } from "../../GlobalContext/GlobalContext";
 import AddShoppingCartIcon from '@material-ui/icons/AddShoppingCart';
 
 
-export default function Products({ product,id, name, price, imgUrl ,description }) {
+export const Products = ({ product,id, name, price, imgUrl ,description }) => {
   const styles = useStyles();
 
   const { addItem, cart ,plus, } = useContext(GlobalContext);
@@ -30,7 +22,7 @@ export default function Products({ product,id, name, price, imgUrl ,description 
     else{  
     product.quantity = 1
     addItem({product});
-    setBtnText('ADD MORE')
+    setBtnText('PRODUCT ADDED')
     }
   };
   
